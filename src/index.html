@@ -56,13 +56,15 @@
     }
 
     #themeToggle {
-      text-decoration: none;
       font-size: 5rem;
+      background-color: #1c1c1e;
+      border: none;
+      cursor: pointer;
     }
 
     @media (prefers-color-scheme: dark) {
       body {
-        background-color: #121212;
+        background-color: #1c1c1e;
       }
 
       h1 {
@@ -92,6 +94,7 @@
       const h1 = document.getElementsByTagName("h1")
       const p = document.getElementsByTagName("p")
       const msForm = document.getElementById("msForm")
+      const themeToggle = document.getElementById("themeToggle")
       let currentMode = document.getElementById("themeToggle").innerHTML
       if (currentMode === "☀️") { // change to Light Mode
         document.getElementById("themeToggle").innerHTML = "&#127761;"; // 🌑
@@ -104,9 +107,10 @@
         }
 
         msForm.style.color = "black"
+        themeToggle.style.background = "white"
       } else { // 🌑 change to Dark Mode
         document.getElementById("themeToggle").innerHTML = "&#9728;&#65039;"; // ☀️
-        document.body.style.backgroundColor = "#121212"
+        document.body.style.backgroundColor = "#1c1c1e"
         for (let i = 0; i < h1.length; ++i) {
           h1[i].style.color = "white"
         }
@@ -114,6 +118,7 @@
           p[i].style.color = "white"
         }
         msForm.style.color = "white"
+        themeToggle.style.background = "#1c1c1e"
       }
 
     }
@@ -122,7 +127,7 @@
 
 <body>
   <div class="container">
-    <script>document.write('<a alt="toggle theme button" href="#" onclick="toggleTheme()" id="themeToggle">&#127761;</a>')</script>
+    <script>document.write('<button alt="toggle theme button" onclick="toggleTheme()" id="themeToggle">&#127761;</button>')</script>
     <p class="emoji">&#128119; &#128736;&#65039; &#128679;</p>
     <h1 class="text">We've got &#128169 brewing</h1>
     <p class="text">&#128293;People with nothing better to do&#128293;</p>
