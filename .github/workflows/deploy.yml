@@ -1,6 +1,6 @@
 name: Deploy to GitHub Pages
 on:
-  pull-request:
+  pull_request:
     paths: ["src/**"]
     branches: [main]
 
