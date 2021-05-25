@@ -28,101 +28,8 @@
   <meta name="description" content="We've got &#128169; brewing!" />
   <meta name="google" content="notranslate" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    h1 {
-      text-align: center;
-    }
-
-    p {
-      text-align: center;
-      font-size: 2rem;
-    }
-
-    p.emoji {
-      font-size: 5rem;
-    }
-
-    #msForm {
-      margin-top: 2rem;
-      font-size: 1.5rem;
-      text-align: center;
-      color: black
-    }
-
-    #themeToggle {
-      font-size: 5rem;
-      background-color: #1c1c1e;
-      border: none;
-      cursor: pointer;
-    }
-
-    @media (prefers-color-scheme: dark) {
-      body {
-        background-color: #1c1c1e;
-      }
-
-      h1 {
-        color: white;
-      }
-
-      p {
-        color: white;
-      }
-
-      #msForm {
-        color: white;
-      }
-    }
-  </style>
-  <script async>
-    window.onload = () => {
-      const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
-
-      if (prefersDarkScheme.matches) {
-        document.getElementById("themeToggle").innerHTML = "&#9728;&#65039;"; // ☀️
-      }
-
-    };
-
-    async function toggleTheme() {
-      const h1 = document.getElementsByTagName("h1")
-      const p = document.getElementsByTagName("p")
-      const msForm = document.getElementById("msForm")
-      const themeToggle = document.getElementById("themeToggle")
-      let currentMode = document.getElementById("themeToggle").innerHTML
-      if (currentMode === "☀️") { // change to Light Mode
-        document.getElementById("themeToggle").innerHTML = "&#127761;"; // 🌑
-        document.body.style.backgroundColor = "white"
-        for (let i = 0; i < h1.length; ++i) {
-          h1[i].style.color = "black"
-        }
-        for (let i = 0; i < p.length; ++i) {
-          p[i].style.color = "black"
-        }
-
-        msForm.style.color = "black"
-        themeToggle.style.background = "white"
-      } else { // 🌑 change to Dark Mode
-        document.getElementById("themeToggle").innerHTML = "&#9728;&#65039;"; // ☀️
-        document.body.style.backgroundColor = "#1c1c1e"
-        for (let i = 0; i < h1.length; ++i) {
-          h1[i].style.color = "white"
-        }
-        for (let i = 0; i < p.length; ++i) {
-          p[i].style.color = "white"
-        }
-        msForm.style.color = "white"
-        themeToggle.style.background = "#1c1c1e"
-      }
-
-    }
-  </script>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/themeToggle.js"></script>
 </head>
 
 <body>
@@ -133,7 +40,7 @@
     <p class="text">&#128293;People with nothing better to do&#128293;</p>
     <a id="msForm" title="Form for stupid ideas"
       href="https://forms.office.com/Pages/ResponsePage.aspx?id=iL8DFDZRYEGSq0MVXPZwldNdRXgBE3JJtAjSH4R0c7VURFg2WFFWRk1DOEtUSzNLUko5OVpSQVFPQi4u">Throw
-      shit till it sticks amirite, hit us up with ideas!</a>
+      shit till it sticks amirite? Hit us up with ideas!</a>
   </div>
 </body>
 
