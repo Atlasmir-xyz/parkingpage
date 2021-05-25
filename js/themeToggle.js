@@ -11,6 +11,7 @@ async function toggleTheme() {
   const p = document.getElementsByTagName("p");
   const msForm = document.getElementById("msForm");
   const themeToggle = document.getElementById("themeToggle");
+  const footerText = document.getElementsByClassName("footerText");
   let currentMode = document.getElementById("themeToggle").innerHTML;
   if (currentMode === "☀️") {
     // change to Light Mode
@@ -21,6 +22,9 @@ async function toggleTheme() {
     }
     for (let i = 0; i < p.length; ++i) {
       p[i].style.color = "black";
+    }
+    for (let i = 0; i < footerText.length; ++i) {
+      footerText[i].style.color = "black";
     }
 
     msForm.style.color = "black";
@@ -34,6 +38,9 @@ async function toggleTheme() {
     }
     for (let i = 0; i < p.length; ++i) {
       p[i].style.color = "white";
+    }
+    for (let i = 0; i < footerText.length; ++i) {
+      footerText[i].style.color = "white";
     }
     msForm.style.color = "white";
     themeToggle.style.background = "#1c1c1e";
