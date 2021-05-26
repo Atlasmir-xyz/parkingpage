@@ -40,9 +40,12 @@ p.emoji {
 
 #themeToggle {
   font-size: 5rem;
-  background-color: #1c1c1e;
+  background-color: white;
   border: none;
   cursor: pointer;
+}
+.footerText {
+  color: black;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -60,6 +63,10 @@ p.emoji {
 
   #msForm {
     color: white;
+  }
+
+  #themeToggle {
+    background-color: #1c1c1e;
   }
   .footerText {
     color: white;
