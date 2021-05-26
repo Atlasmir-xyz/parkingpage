@@ -17,6 +17,7 @@ async function toggleTheme() {
     // change to Light Mode
     document.getElementById("themeToggle").innerHTML = "&#127761;"; // 🌑
     document.body.style.backgroundColor = "white";
+    themeToggle.style.background = "white";
     for (let i = 0; i < h1.length; ++i) {
       h1[i].style.color = "black";
     }
@@ -26,13 +27,12 @@ async function toggleTheme() {
     for (let i = 0; i < footerText.length; ++i) {
       footerText[i].style.color = "black";
     }
-
     msForm.style.color = "black";
-    themeToggle.style.background = "white";
   } else {
     // 🌑 change to Dark Mode
     document.getElementById("themeToggle").innerHTML = "&#9728;&#65039;"; // ☀️
     document.body.style.backgroundColor = "#1c1c1e";
+    themeToggle.style.background = "#1c1c1e";
     for (let i = 0; i < h1.length; ++i) {
       h1[i].style.color = "white";
     }
@@ -43,6 +43,5 @@ async function toggleTheme() {
       footerText[i].style.color = "white";
     }
     msForm.style.color = "white";
-    themeToggle.style.background = "#1c1c1e";
   }
 }
